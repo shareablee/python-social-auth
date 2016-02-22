@@ -104,6 +104,7 @@ Social backends
    openstreetmap
    orbi
    persona
+   pinterest
    pixelpin
    pocket
    podio
