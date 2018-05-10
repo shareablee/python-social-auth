@@ -69,8 +69,8 @@ def user_backends_data(user, backends, storage):
     """
     available = list(load_backends(backends).keys())
     values = {'associated': [],
-              'not_associated': [item for item in available if item not in HIDDEN_BACKENDS],
-              'backends': [item for item in available if item not in HIDDEN_BACKENDS]}
+              'not_associated': available,
+              'backends': available}
     if user_is_authenticated(user):
         associated = storage.user.get_social_auth_for_user(user)
         not_associated = list(set(available) -
